@@ -2,14 +2,50 @@
   "isFull": false,
   "list": [
     {
-      "title": "这里填写示例标题",
-      "description": "这里填写示例说明",
+      "title": "普通的弹窗示例",
+      "description": "展示一个普通的弹窗示例",
       "code": "./base.js",
-      "scope": [],
-      "__scope_notes": {
-        "name": "这里填写包导出名称(这是一个注释字段，需要添加到[scope]中)",
-        "packageName": "这里填写包名(这是一个注释字段，需要添加到[scope]中)"
-      }
+      "scope": [
+        {
+          "name": "_withLayer",
+          "packageName": "@kne/with-layer"
+        },
+        {
+          "name": "modal",
+          "packageName": "antd/lib/modal"
+        },
+        {
+          "name": "button",
+          "packageName": "antd/lib/button"
+        },
+        {
+          "name": "lodash",
+          "packageName": "lodash"
+        }
+      ]
+    },
+    {
+      "title": "context中继",
+      "description": "展示context中继的方法",
+      "code": "./relay.js",
+      "scope": [
+        {
+          "name": "_withLayer",
+          "packageName": "@kne/with-layer"
+        },
+        {
+          "name": "modal",
+          "packageName": "antd/lib/modal"
+        },
+        {
+          "name": "button",
+          "packageName": "antd/lib/button"
+        },
+        {
+          "name": "lodash",
+          "packageName": "lodash"
+        }
+      ]
     }
   ]
 }

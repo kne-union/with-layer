@@ -1,1 +1,4 @@
-这里填写组件概要说明
+让类似Antd Modal的使用传送门(createPortal)创建的弹窗类的组件可以用函数的方式调用。
+
+* 由于已经脱离原来的上下文(context)，所以弹窗内无法使用弹窗外的context，如果有些全局的context，需要在preset中设置withInstall，它是一个高阶组件
+* 也可以在调用withLayer的时候传入withInstall来做context中继，它会后于preset的withInstall执行而不会覆盖
