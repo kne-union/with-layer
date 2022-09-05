@@ -1,7 +1,7 @@
-import * as component_165 from '@kne/with-layer';
-import * as component_166 from 'antd/lib/modal';
-import * as component_167 from 'antd/lib/button';
-import * as component_168 from 'lodash';
+import * as component_1 from '@kne/with-layer';
+import * as component_2 from 'antd/lib/modal';
+import * as component_3 from 'antd/lib/button';
+import * as component_4 from 'lodash';
 const readmeConfig = {
     name: `@kne/with-layer`,
     description: ``,
@@ -29,7 +29,27 @@ const readmeConfig = {
 </tr>
 </tbody>
 </table>
-<p>其他参数参考 <a href="https://ant.design/components/modal-cn/">antd Modal</a></p>`,
+<p>其他参数参考 <a href="https://ant.design/components/modal-cn/">antd Modal</a></p>
+<h3>preset</h3>
+<p>preset(props);</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>withInstall</td>
+<td>一个高阶组件，辅助实现context中继</td>
+<td>function</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>`,
     example: {
         isFull: false,
         className: `with_layer_8f130`,
@@ -63,19 +83,19 @@ render(<BaseExample />);
     scope: [{
     name: "_withLayer",
     packageName: "@kne/with-layer",
-    component: component_165
+    component: component_1
 },{
     name: "modal",
     packageName: "antd/lib/modal",
-    component: component_166
+    component: component_2
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_167
+    component: component_3
 },{
     name: "lodash",
     packageName: "lodash",
-    component: component_168
+    component: component_4
 }]
 },{
     title: `context中继`,
@@ -121,19 +141,19 @@ render(<BaseExample />);
     scope: [{
     name: "_withLayer",
     packageName: "@kne/with-layer",
-    component: component_165
+    component: component_1
 },{
     name: "modal",
     packageName: "antd/lib/modal",
-    component: component_166
+    component: component_2
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_167
+    component: component_3
 },{
     name: "lodash",
     packageName: "lodash",
-    component: component_168
+    component: component_4
 }]
 }]
     }

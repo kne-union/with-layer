@@ -6,7 +6,7 @@ import { global } from "./preset";
 
 const withLayer = WrappedComponent => {
   return ({ onCancel, onDestroy, outRef, onMount, onOk, ...props }) => {
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
     useImperativeHandle(
       outRef,
       () => {
@@ -23,6 +23,7 @@ const withLayer = WrappedComponent => {
 
     useEffect(() => {
       mount();
+      setVisible(true);
     }, [mount]);
 
     return (
@@ -53,9 +54,10 @@ const withLayer = WrappedComponent => {
 const createWithLayer = WrappedComponent => {
   const LayerComponent = compose(withLayer, global.withInstall)(WrappedComponent);
   const ref = createRef(null);
-  const root = document.createElement("div"),
-    body = document.body;
-  return ({ withInstall, ...props }) => {
+  const body = document.body;
+  return (args) => {
+    const root = document.createElement("div");
+    const { withInstall, getContainer, ...props } = Object.assign({}, args);
     body.appendChild(root);
     const rootDom = ReactDOM.createRoot(root);
     const promise = new Promise((resolve) => {
@@ -64,11 +66,13 @@ const createWithLayer = WrappedComponent => {
         <LayerInstance
           outRef={ref}
           {...props}
+          getContainer={getContainer ? getContainer : () => root}
           onDestroy={() => {
+            root.style.opacity = "0";
+            body.removeChild(root);
             setTimeout(() => {
               rootDom.unmount();
-              body.removeChild(root);
-            });
+            }, 0);
           }}
           onMount={() => {
             resolve({
@@ -92,3 +96,4 @@ const createWithLayer = WrappedComponent => {
 };
 
 export default createWithLayer;
+export { preset } from "./preset";
