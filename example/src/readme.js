@@ -1,7 +1,7 @@
-import * as component_1 from '@kne/with-layer';
-import * as component_2 from 'antd/lib/modal';
-import * as component_3 from 'antd/lib/button';
-import * as component_4 from 'lodash';
+import * as component_9 from '@kne/with-layer';
+import * as component_10 from 'antd/lib/modal';
+import * as component_11 from 'antd/lib/button';
+import * as component_12 from 'lodash';
 const readmeConfig = {
     name: `@kne/with-layer`,
     description: ``,
@@ -72,6 +72,7 @@ const createModal = withLayer((props) => {
 const BaseExample = () => {
   return <Button type="primary" onClick={() => {
     const instance = createModal({
+      withInstall:(WrappedComponent)=>(props)=><div className="test"><WrappedComponent {...props}/></div>,
       title: "弹窗示例"
     });
   }}>弹出弹窗</Button>;
@@ -83,19 +84,19 @@ render(<BaseExample />);
     scope: [{
     name: "_withLayer",
     packageName: "@kne/with-layer",
-    component: component_1
+    component: component_9
 },{
     name: "modal",
     packageName: "antd/lib/modal",
-    component: component_2
+    component: component_10
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_3
+    component: component_11
 },{
     name: "lodash",
     packageName: "lodash",
-    component: component_4
+    component: component_12
 }]
 },{
     title: `context中继`,
@@ -141,19 +142,19 @@ render(<BaseExample />);
     scope: [{
     name: "_withLayer",
     packageName: "@kne/with-layer",
-    component: component_1
+    component: component_9
 },{
     name: "modal",
     packageName: "antd/lib/modal",
-    component: component_2
+    component: component_10
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_3
+    component: component_11
 },{
     name: "lodash",
     packageName: "lodash",
-    component: component_4
+    component: component_12
 }]
 }]
     }

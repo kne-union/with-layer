@@ -52,10 +52,10 @@ const withLayer = WrappedComponent => {
 };
 
 const createWithLayer = WrappedComponent => {
-  const LayerComponent = compose(withLayer, global.withInstall)(WrappedComponent);
   const ref = createRef(null);
   const body = document.body;
   return (args) => {
+    const LayerComponent = compose(withLayer, global.withInstall)(WrappedComponent);
     const root = document.createElement("div");
     const { withInstall, getContainer, ...props } = Object.assign({}, args);
     body.appendChild(root);

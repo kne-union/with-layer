@@ -41,6 +41,7 @@ const createModal = withLayer((props) => {
 const BaseExample = () => {
   return <Button type="primary" onClick={() => {
     const instance = createModal({
+      withInstall:(WrappedComponent)=>(props)=><div className="test"><WrappedComponent {...props}/></div>,
       title: "弹窗示例"
     });
   }}>弹出弹窗</Button>;
