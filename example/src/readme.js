@@ -1,7 +1,7 @@
-import * as component_9 from '@kne/with-layer';
-import * as component_10 from 'antd/lib/modal';
-import * as component_11 from 'antd/lib/button';
-import * as component_12 from 'lodash';
+import * as component_1 from '@kne/with-layer';
+import * as component_2 from 'antd/lib/modal';
+import * as component_3 from 'antd/lib/button';
+import * as component_4 from 'lodash';
 const readmeConfig = {
     name: `@kne/with-layer`,
     description: ``,
@@ -84,19 +84,19 @@ render(<BaseExample />);
     scope: [{
     name: "_withLayer",
     packageName: "@kne/with-layer",
-    component: component_9
+    component: component_1
 },{
     name: "modal",
     packageName: "antd/lib/modal",
-    component: component_10
+    component: component_2
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_11
+    component: component_3
 },{
     name: "lodash",
     packageName: "lodash",
-    component: component_12
+    component: component_4
 }]
 },{
     title: `context中继`,
@@ -142,19 +142,19 @@ render(<BaseExample />);
     scope: [{
     name: "_withLayer",
     packageName: "@kne/with-layer",
-    component: component_9
+    component: component_1
 },{
     name: "modal",
     packageName: "antd/lib/modal",
-    component: component_10
+    component: component_2
 },{
     name: "button",
     packageName: "antd/lib/button",
-    component: component_11
+    component: component_3
 },{
     name: "lodash",
     packageName: "lodash",
-    component: component_12
+    component: component_4
 }]
 }]
     }
