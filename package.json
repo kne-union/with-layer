@@ -1,14 +1,16 @@
 {
   "name": "@kne/with-layer",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "files": [
     "dist"
   ],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
   "dependencies": {
     "@kne/compose": "^0.1.0",
-    "@kne/use-ref-callback": "^0.1.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@kne/use-ref-callback": "^0.1.2"
   },
   "scripts": {
     "start": "run-p start:lib start:md start:example",
