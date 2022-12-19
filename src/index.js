@@ -45,8 +45,8 @@ const withLayer = WrappedComponent => {
 
 const createWithLayer = WrappedComponent => {
   const ref = createRef(null);
-  const body = global.getContainer && global.getContainer() || document.body;
   return (args) => {
+    const body = global.getContainer && global.getContainer() || document.body;
     const root = document.createElement("div");
     const { withInstall, getContainer, ...props } = Object.assign({}, args);
     body.appendChild(root);

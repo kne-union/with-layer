@@ -1,4 +1,3 @@
-import "antd/dist/antd.css";
 import { useEffect } from "react";
 import ExampleDriver from "@kne/example-driver";
 import readme from "./readme";
